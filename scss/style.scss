@@ -1,0 +1,81 @@
+@import "variables";
+
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Kumbh Sans', sans-serif;
+    line-height: 1.5;
+    height: 100vh;
+    //background-color: $darkCyan;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $darkCyan;
+    background-image: url('/images/bg-pattern-top.svg'), url('/images/bg-pattern-bottom.svg');
+    background-repeat: no-repeat;
+    background-position: right 50vw bottom 40vh, left 50vw top 40vh;
+    flex-direction: column;
+}
+h1,
+h2,
+h3 {
+    font-size: 1.2rem;
+}
+h1, h2, p{
+    margin: 0;
+}
+p {
+    color: $darkGray;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+ul li {
+    list-style: none;
+}
+.card {
+    height: 360px;
+    width: 350px;
+    border-radius: 20px;
+    background-color: #fff;
+    background-image: url('/images/bg-pattern-card.svg');
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: contain;
+    position: relative;
+    &--image {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        border: 5px solid #fff;
+        width: 30%;
+    }
+    &--text {
+        margin-top: 13rem;
+
+        h1::after {
+            content: " 26";
+            color: $darkGray;
+        }
+        .card--profiles {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            margin-top: 29px;
+        }
+    }
+}
+
